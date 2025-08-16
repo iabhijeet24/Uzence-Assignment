@@ -28,23 +28,22 @@ Uzence-Assignment/
 
 
 
-
 ---
 
 ## 🛠️ Tech Stack
-- **Frontend:** React.js, Vite, Tailwind CSS  
-- **Backend (if included):** Node.js, Express  
-- **State Management:** React Hooks / Context API  
-- **Other Tools:** Axios, ESLint, Prettier  
+- **Frontend:** React.js, Vite, Typescript, CSS3, Tailwind CSS  
+- **State Management:** React Hooks / Context API / React libraries 
+- **Other Tools:** Axios, Prettier, VS Code 
 
 ---
 
 ## ✅ Required Features
 - [x] Responsive UI implementation  
 - [x] Reusable and modular components  
-- [x] API integration for dynamic data  
 - [x] Form validation and error handling  
 - [x] Proper folder structure and clean code  
+- [x] Usage of correct tech-stack 
+
 
 ---
 
@@ -52,7 +51,10 @@ Uzence-Assignment/
 - Dark/Light mode support  
 - Loading and error states for better UX  
 - Mobile-first responsive design  
-- Deployed preview for live testing  
+- Deployed preview for live testing
+- Select All button in DataTable
+- Random Password Generator in Input Field  
+- Eligiblity boolean change (True/False) on the basis of Age
 
 ---
 
@@ -71,3 +73,27 @@ Uzence-Assignment/
 
 3. **Build for production**
    npm run build
+
+---
+
+## 🧭 Approach
+
+The project was built with a component-driven architecture, ensuring reusability and scalability.
+
+Each UI section is created into smaller reusable components.
+
+Styling is done using Tailwind CSS for faster and responsive design.
+
+Code is structured to maintain readability and follow best practices.
+
+---
+## 🖼️ Images/Output
+
+![Light Mode Screenshot](./assets/light.png)
+![Dark Mode Screenshot](./assets/dark.png)
+
+---
+
+## 🔗 Preview Link
+👉 [Live Demo](https://uzence-assignment-seven.vercel.app/)
+---
