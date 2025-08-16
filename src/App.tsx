@@ -3,12 +3,21 @@ import DataTable from "./components/DataTable/DataTable";
 import InputField from "./components/InputField/InputField";
 import "./App.css";
 
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  age: number;
+  profession: string;
+}
+
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
 
-  const users = [
+  const users: User[] = [
     { id: 1, name: "Amit Sharma", email: "amitsharma@gmail.com", age: 20, profession: "Software Engineer" },
     { id: 2, name: "Priya Verma", email: "priya12verma@gmail.com", age: 17, profession: "Student" },
     { id: 3, name: "Rohit Kumar", email: "rohitkumar021@gmail.com", age: 22, profession: "Marketing Executive" },
@@ -26,7 +35,6 @@ function App() {
         darkMode ? "bg-black text-white" : "bg-white text-black"
       }`}
     >
-      {/* Toggle Button */}
       <div className="flex justify-end mb-6">
         <button
           onClick={() => setDarkMode(!darkMode)}
@@ -35,8 +43,8 @@ function App() {
           <img
             src={
               darkMode
-                ? "https://cdn-icons-png.flaticon.com/512/4814/4814268.png" // ☀️ Sun
-                : "https://cdn-icons-png.flaticon.com/512/6714/6714978.png" // 🌙 Moon
+                ? "https://cdn-icons-png.flaticon.com/512/4814/4814268.png"
+                : "https://cdn-icons-png.flaticon.com/512/6714/6714978.png"
             }
             alt="toggle theme"
             className="w-6 h-6"
@@ -44,7 +52,6 @@ function App() {
         </button>
       </div>
 
-      {/* Input Section */}
       <div
         className={`max-w-md mx-auto mb-10 space-y-4 p-6 rounded-lg shadow-md ${
           darkMode ? "bg-red-700" : "bg-red-100"
@@ -77,6 +84,8 @@ function App() {
 
         <InputField
           label="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
           variant="ghost"
           size="lg"
@@ -84,7 +93,6 @@ function App() {
         />
       </div>
 
-      {/* Data Table Section */}
       <div
         className={`rounded-lg shadow-md overflow-hidden ${
           darkMode ? "bg-red-950/70" : "bg-red-100"

@@ -1,9 +1,22 @@
 import React, { useState } from "react";
 
-export default function DataTable({ data, darkMode }) {
-  const [selectedRows, setSelectedRows] = useState([]);
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  age: number;
+  profession: string;
+}
 
-  const toggleRow = (id) => {
+interface DataTableProps {
+  data: User[];
+  darkMode: boolean;
+}
+
+export default function DataTable({ data, darkMode }: DataTableProps) {
+  const [selectedRows, setSelectedRows] = useState<number[]>([]);
+
+  const toggleRow = (id: number) => {
     setSelectedRows((prev) =>
       prev.includes(id) ? prev.filter((rowId) => rowId !== id) : [...prev, id]
     );
@@ -11,9 +24,9 @@ export default function DataTable({ data, darkMode }) {
 
   const toggleAll = () => {
     if (selectedRows.length === data.length) {
-      setSelectedRows([]); // unselect all
+      setSelectedRows([]);
     } else {
-      setSelectedRows(data.map((row) => row.id)); // select all
+      setSelectedRows(data.map((row) => row.id));
     }
   };
 
@@ -55,7 +68,6 @@ export default function DataTable({ data, darkMode }) {
                   : "bg-gray-100 text-black"
               }`}
             >
-              {/* Row Checkbox */}
               <td className="px-4 py-3 text-center">
                 <input
                   type="checkbox"
