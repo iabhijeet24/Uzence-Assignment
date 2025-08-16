@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DataTable from "./components/DataTable/DataTable";
 import InputField from "./components/InputField/InputField";
+import "./App.css";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -8,44 +9,52 @@ function App() {
   const [password, setPassword] = useState("");
 
   const users = [
-    { id: 1, name: "John Doe", email: "john@example.com", age: 20 },
-    { id: 2, name: "Jane Smith", email: "jane@example.com", age: 17 },
-    { id: 3, name: "Alice Johnson", email: "alice@example.com", age: 22 },
-    { id: 4, name: "Bob Brown", email: "bob@example.com", age: 16 },
-    { id: 5, name: "Charlie Green", email: "charlie@example.com", age: 25 },
-    { id: 6, name: "Diana Prince", email: "diana@example.com", age: 30 },
-    { id: 7, name: "Evan Wright", email: "evan@example.com", age: 15 },
-    { id: 8, name: "Fiona Adams", email: "fiona@example.com", age: 18 },
-    { id: 9, name: "George King", email: "george@example.com", age: 19 },
-    { id: 10, name: "Hannah Lee", email: "hannah@example.com", age: 21 },
-    { id: 11, name: "Ian Scott", email: "ian@example.com", age: 14 },
-    { id: 12, name: "Julia White", email: "julia@example.com", age: 23 },
+    { id: 1, name: "Amit Sharma", email: "amitsharma@gmail.com", age: 20, profession: "Software Engineer" },
+    { id: 2, name: "Priya Verma", email: "priya12verma@gmail.com", age: 17, profession: "Student" },
+    { id: 3, name: "Rohit Kumar", email: "rohitkumar021@gmail.com", age: 22, profession: "Marketing Executive" },
+    { id: 4, name: "Neha Singh", email: "nehasingh886@gmail.com", age: 16, profession: "Student" },
+    { id: 5, name: "Arjun Mehta", email: "arjun@gmail.com", age: 25, profession: "Doctor" },
+    { id: 6, name: "Sneha Iyer", email: "sneha.iyer@gmail.com", age: 30, profession: "Professor" },
+    { id: 7, name: "Vikram Nair", email: "vikramnair21@gmail.com", age: 15, profession: "Student" },
+    { id: 8, name: "Anjali Gupta", email: "guptaanjali@gmail.com", age: 18, profession: "Content Writer" },
+    { id: 9, name: "Karan Malhotra", email: "karanmalhotra224@gmail.com", age: 19, profession: "Graphic Designer" },
   ];
 
   return (
     <div
-      className={`min-h-screen p-6 ${
-        darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
+      className={`min-h-screen p-6 transition-colors duration-500 ${
+        darkMode ? "bg-black text-white" : "bg-white text-black"
       }`}
     >
       {/* Toggle Button */}
       <div className="flex justify-end mb-6">
         <button
           onClick={() => setDarkMode(!darkMode)}
-          className="px-4 py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition"
+          className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition"
         >
-          {darkMode ? "Light Mode" : "Dark Mode"}
+          <img
+            src={
+              darkMode
+                ? "https://cdn-icons-png.flaticon.com/512/4814/4814268.png" // ☀️ Sun
+                : "https://cdn-icons-png.flaticon.com/512/6714/6714978.png" // 🌙 Moon
+            }
+            alt="toggle theme"
+            className="w-6 h-6"
+          />
         </button>
       </div>
 
-      {/* Input Fields Section */}
-      <div className="max-w-md mx-auto mb-10 space-y-4">
+      {/* Input Section */}
+      <div
+        className={`max-w-md mx-auto mb-10 space-y-4 p-6 rounded-lg shadow-md ${
+          darkMode ? "bg-red-950/70" : "bg-red-100"
+        }`}
+      >
         <InputField
           label="Full Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Enter your name"
-          helperText="Please enter your real name"
           clearable
           variant="outlined"
           size="md"
@@ -75,8 +84,14 @@ function App() {
         />
       </div>
 
-      {/* DataTable Section */}
-      <DataTable data={users} />
+      {/* Data Table Section */}
+      <div
+        className={`rounded-lg shadow-md overflow-hidden ${
+          darkMode ? "bg-red-950/70" : "bg-red-100"
+        }`}
+      >
+        <DataTable data={users} darkMode={darkMode} />
+      </div>
     </div>
   );
 }
