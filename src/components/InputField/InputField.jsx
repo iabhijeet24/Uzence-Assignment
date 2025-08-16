@@ -25,15 +25,17 @@ export default function InputField({
     lg: "px-4 py-3 text-lg",
   };
 
-  const variantClasses = {
-    outlined: `border ${
-      invalid ? "border-red-500" : "border-gray-400"
-    } rounded-lg`,
-    filled: `bg-gray-200 ${
-      darkMode ? "bg-gray-700 text-white" : "bg-gray-100 text-black"
-    } rounded-lg`,
-    ghost: "border-b border-gray-400 rounded-none",
-  };
+const variantClasses = {
+  outlined: `border ${
+    invalid ? "border-red-500" : "border-gray-400"
+  } rounded-lg`,
+  filled: `${
+    darkMode ? "bg-gray-800 text-white" : "bg-red-100 text-black"
+  } rounded-lg`,
+  ghost: "border-b border-gray-400 rounded-none",
+};
+
+
 
   const inputType =
     type === "password" && passwordToggle
@@ -63,7 +65,7 @@ export default function InputField({
       {label && (
         <label
           className={`mb-1 font-medium ${
-            darkMode ? "text-gray-200" : "text-gray-800"
+            darkMode ? " text-gray-200" : "text-gray-800"
           }`}
         >
           {label}
@@ -104,8 +106,8 @@ export default function InputField({
             <img
               src={
                 showPassword
-                  ? "https://cdn-icons-png.flaticon.com/512/709/709612.png" // 👁️ open eye
-                  : "https://cdn-icons-png.flaticon.com/512/2767/2767146.png" // 🙈 closed eye
+                  ? "https://cdn-icons-png.flaticon.com/512/709/709612.png" 
+                  : "https://cdn-icons-png.flaticon.com/512/2767/2767146.png" 
               }
               alt="toggle visibility"
               className="w-5 h-5"

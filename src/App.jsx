@@ -47,7 +47,7 @@ function App() {
       {/* Input Section */}
       <div
         className={`max-w-md mx-auto mb-10 space-y-4 p-6 rounded-lg shadow-md ${
-          darkMode ? "bg-red-950/70" : "bg-red-100"
+          darkMode ? "bg-red-700" : "bg-red-100"
         }`}
       >
         <InputField
