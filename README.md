@@ -89,11 +89,13 @@ Code is structured to maintain readability and follow best practices.
 ---
 ## 🖼️ Images/Output
 
-![Light Mode Screenshot](./assets/light.png)
-![Dark Mode Screenshot](./assets/dark.png)
+![Light Mode Screenshot](./src/assets/light.png)
+![Dark Mode Screenshot](./src/assets/dark.PNG)
 
 ---
 
 ## 🔗 Preview Link
 👉 [Live Demo](https://uzence-assignment-seven.vercel.app/)
+👉 [StoryBook Demo](https://uzence-assignment-4c6x.vercel.app/?path=/story/components-datatable--default)
+
 ---
