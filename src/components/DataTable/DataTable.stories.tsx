@@ -1,35 +1,25 @@
+// DataTable.stories.tsx
 import type { Meta, StoryObj } from "@storybook/react";
-import DataTable from "./DataTable";
-
-interface User {
-  id: number;
-  name: string;
-  email: string;
-  age: number;
-  profession: string;
-}
-
-const sampleData: User[] = [
-  { id: 1, name: "Amit Sharma", email: "amit@example.com", age: 20, profession: "Engineer" },
-  { id: 2, name: "Priya Verma", email: "priya@example.com", age: 17, profession: "Student" },
-  { id: 3, name: "Rahul Mehta", email: "rahul@example.com", age: 25, profession: "Designer" },
-  { id: 4, name: "Sneha Kapoor", email: "sneha@example.com", age: 16, profession: "Student" },
-];
+import DataTable from "./DataTable"; // ✅ Case-sensitive import (important for Linux/Mac)
 
 const meta: Meta<typeof DataTable> = {
   title: "Components/DataTable",
   component: DataTable,
-  parameters: {
-    layout: "centered",
-  },
-  argTypes: {
-    darkMode: { control: "boolean" },
-  },
+  tags: ["autodocs"],
 };
-
 export default meta;
+
 type Story = StoryObj<typeof DataTable>;
 
+// ✅ Sample data
+const sampleData = [
+  { id: 1, name: "John Doe", email: "john@example.com", age: 25, profession: "Engineer" },
+  { id: 2, name: "Jane Smith", email: "jane@example.com", age: 30, profession: "Designer" },
+  { id: 3, name: "Alice Johnson", email: "alice@example.com", age: 22, profession: "Developer" },
+  { id: 4, name: "Bob Brown", email: "bob@example.com", age: 17, profession: "Intern" },
+];
+
+// ✅ Stories
 export const Default: Story = {
   args: {
     data: sampleData,
@@ -44,7 +34,7 @@ export const DarkMode: Story = {
   },
 };
 
-export const Empty: Story = {
+export const EmptyData: Story = {
   args: {
     data: [],
     darkMode: false,
