@@ -7,24 +7,28 @@ This repository contains two reusable UI components — **InputField** and **Dat
     
 ## 📂 Project Structure  
 
+## 📂 Project Structure
+
+```
 Uzence-Assignment/
 │── src/
-│ ├── components/
-│ │ ├── InputField/
-│ │ │ ├── InputField.tsx
-│ │ │ ├── InputField.stories.tsx
-│ │ │ └── InputField.test.tsx
-│ │ ├── DataTable/
-│ │ │ ├── DataTable.tsx
-│ │ │ ├── DataTable.stories.tsx
-│ │ │ └── DataTable.test.tsx
-│ ├── index.ts
+│   ├── components/
+│   │   ├── InputField/
+│   │   │   ├── InputField.tsx
+│   │   │   ├── InputField.stories.tsx
+│   │   │   └── InputField.test.tsx
+│   │   ├── DataTable/
+│   │   │   ├── DataTable.tsx
+│   │   │   ├── DataTable.stories.tsx
+│   │   │   └── DataTable.test.tsx
+│   ├── index.ts
 │── .storybook/
 │── package.json
 │── tailwind.config.js
 │── tsconfig.json
 │── README.md
 
+```
 
 ---
 
@@ -97,4 +101,9 @@ Code is structured to maintain readability and follow best practices.
 
 👉 [StoryBook Demo](https://uzence-assignment-4c6x.vercel.app/?path=/story/components-datatable--default)
 
+---
+
+## ✅ Conclusion
+
+This project helped me strengthen my skills in React, TypeScript, Storybook, and TailwindCSS while learning how to build reusable components with clean structure and testing. I’m grateful for the opportunity to work on this project and enhance my frontend development experience.
 ---
