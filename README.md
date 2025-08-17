@@ -1,6 +1,6 @@
 # Uzence Assignment 🚀  
 
-A front-end assignment project built with **React, TypeScript, TailwindCSS, and Storybook**.  
+A front-end assignment project built with **React, TypeScript, TailwindCSS, and Storybook** for Uzence Design Studio.  
 This repository contains two reusable UI components — **InputField** and **DataTable** — implemented with scalability, theming, and modern React patterns.  
 
 ---
@@ -26,13 +26,11 @@ Uzence-Assignment/
 │── README.md
 
 
-
-
 ---
 
 ## 🛠️ Tech Stack
 - **Frontend:** React.js, Vite, Typescript, CSS3, Tailwind CSS  
-- **State Management:** React Hooks / Context API / React libraries 
+- **State Management:** React Hooks / React libraries 
 - **Other Tools:** Axios, Prettier, VS Code 
 
 ---
@@ -96,6 +94,7 @@ Code is structured to maintain readability and follow best practices.
 
 ## 🔗 Preview Link
 👉 [Live Demo](https://uzence-assignment-seven.vercel.app/)
+
 👉 [StoryBook Demo](https://uzence-assignment-4c6x.vercel.app/?path=/story/components-datatable--default)
 
 ---
